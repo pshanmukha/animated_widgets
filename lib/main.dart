@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'animated_widgets/animatedAlign_widget.dart';
+import 'animated_widgets/animatedBuilder_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +38,8 @@ class MyHomePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextButton(
               onPressed: () {
@@ -45,6 +48,19 @@ class MyHomePage extends StatelessWidget {
               },
               child: Text(
                 "AnimatedAlign",
+                style: TextStyle(
+                    color: Colors.grey[800],
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const AnimatedBuilderWidget()));
+              },
+              child: Text(
+                "AnimatedBuilder",
                 style: TextStyle(
                     color: Colors.grey[800],
                     fontWeight: FontWeight.bold,
