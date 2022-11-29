@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'animated_widgets/AnimatedDefaultTextStyle_widget.dart';
 import 'animated_widgets/animatedAlign_widget.dart';
 import 'animated_widgets/animatedBuilder_widget.dart';
 import 'animated_widgets/animatedContainer_widget.dart';
@@ -75,6 +76,19 @@ class MyHomePage extends StatelessWidget {
               },
               child: Text(
                 "AnimatedContainer",
+                style: TextStyle(
+                    color: Colors.grey[800],
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const AnimatedDefaultTextStyleWidget()));
+              },
+              child: Text(
+                "AnimatedDefaultTextStyle",
                 style: TextStyle(
                     color: Colors.grey[800],
                     fontWeight: FontWeight.bold,
