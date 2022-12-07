@@ -6,6 +6,7 @@ import 'animated_widgets/AnimatedModalBarrier_widget.dart';
 import 'animated_widgets/animatedAlign_widget.dart';
 import 'animated_widgets/animatedBuilder_widget.dart';
 import 'animated_widgets/animatedContainer_widget.dart';
+import 'animated_widgets/tweenAnimationBuilder_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -117,6 +118,19 @@ class MyHomePage extends StatelessWidget {
               },
               child: Text(
                 "AnimatedModalBarrier",
+                style: TextStyle(
+                    color: Colors.grey[800],
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const TweenAnimationBuilderWidget()));
+              },
+              child: Text(
+                "TweenAnimationBuilder",
                 style: TextStyle(
                     color: Colors.grey[800],
                     fontWeight: FontWeight.bold,
